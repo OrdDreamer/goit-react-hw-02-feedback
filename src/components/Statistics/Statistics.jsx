@@ -1,12 +1,11 @@
 import styles from './statistics.module.css';
 import PropTypes from 'prop-types';
-import Section from '../Section/Section';
 import Notification from '../Notification/Notification';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
 
   return (
-    <Section title='Statistics'>
+    <>
       {total
         ? (<>
           <p className={styles.rateItem}>Good: {good}</p>
@@ -17,7 +16,7 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
         </>)
         : (<Notification message={'There is no feedback'} />)
       }
-    </Section>
+    </>
   );
 };
 
